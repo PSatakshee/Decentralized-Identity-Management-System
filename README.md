@@ -29,9 +29,9 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ## 🏗️ Project Structure
 <details>
 <summary>Click to expand</summary>
-  dims/
- -├── contracts/
- - │ ├──contracts/
+  dims/<br>
+  ├── contracts/<br>
+  │ ├──contracts/<br>
   │   ├── DIMS.sol # Smart contract for identity management
   │   └── IdentityNFT.sol # NFT badge smart contract
   │ ├── scripts/
