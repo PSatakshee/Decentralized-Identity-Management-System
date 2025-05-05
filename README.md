@@ -32,32 +32,35 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
   dims/<br>
   ├── contracts/<br>
   │ ├──contracts/<br>
-  │   ├── DIMS.sol # Smart contract for identity management<br>
-  │   └── IdentityNFT.sol # NFT badge smart contract<br>
+  │ │  ├── DIMS.sol # Smart contract for identity management<br>
+  │ │  └── IdentityNFT.sol # NFT badge smart contract<br>
   │ ├── scripts/<br>
-  │   ├── deploy.ts # Smart contract deployment script<br>
-  │   └── testFlow.js # Identity flow test script<br>
+  │ │  ├── deploy.ts # Smart contract deployment script<br>
+  │ │  └── testFlow.js # Identity flow test script<br>
   │ └── test/<br>
-  │   └── Lock.test # Example unit test<br>
+  │ │  └── Lock.test # Example unit test<br>
   ├── public/<br>
   │ ├── abi.json # ABI for frontend integration<br>
   │ └── nftabi.json # ABI for NFT<br>
   ├── src/<br>
   │ ├── app/<br>
-  │   ├── admin/<br>
-  │     └── page.tsx<br>
-  │   ├── layout.tsx<br>
-  │   ├── MetaMaskConnection.tsx<br>
-  │   ├── page.tsx<br>
-  │   └── upload.tsx<br>
+  │ │  ├── admin/<br>
+  │ │    └── page.tsx<br>
+  │ │  ├── layout.tsx<br>
+  │ │  ├── MetaMaskConnection.tsx<br>
+  │ │  ├── page.tsx<br>
+  │ │  └── upload.tsx<br>
   │ ├── components/<br>
-  │   └── button.tsx<br>
+  │ │  └── button.tsx<br>
   │ └── lib/<br>
-  │   ├── ipfs.ts<br>
-  │   └── web3.ts<br>
+  │ │  ├── ipfs.ts<br>
+  │ │  └── web3.ts<br>
 
 </details>
+
+
 ---
+
 
 ## ⚙️ How It Works
 
@@ -110,16 +113,19 @@ npm install
 
 - Copy .env.example to .env.local and fill in:
 <ul>
-    ALCHEMY_API_URL=
-    PRIVATE_KEY=
-    NEXT_PUBLIC_CONTRACT_ADDRESS=
-    NEXT_PUBLIC_NFT_ADDRESS=
-    NEXT_PUBLIC_WALLET_ADDRESS=
-    NEXT_PUBLIC_PINATA_API_KEY=
-    NEXT_PUBLIC_PINATA_SECRET_API_KEY=
-    NEXT_PUBLIC_PINATA_JWT=
+    --ALCHEMY_API_URL=
+    --PRIVATE_KEY=
+    --NEXT_PUBLIC_CONTRACT_ADDRESS=
+    --NEXT_PUBLIC_NFT_ADDRESS=
+    --NEXT_PUBLIC_WALLET_ADDRESS=
+    --NEXT_PUBLIC_PINATA_API_KEY=
+    --NEXT_PUBLIC_PINATA_SECRET_API_KEY=
+    --NEXT_PUBLIC_PINATA_JWT=
 </ul>
+
+
 ---
+
 
 ###📤 Deploy Smart Contracts
 
