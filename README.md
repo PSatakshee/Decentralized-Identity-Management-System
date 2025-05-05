@@ -99,7 +99,7 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ### 📦 Setup
 
 ```bash
-git clone https://github.com/PSatakshee/dims.git
+git clone [https://github.com/PSatakshee/dims.git](https://github.com/PSatakshee/Decentralized-Identity-Management-System.git)
 cd dims
 ```
 - Install dependencies:
