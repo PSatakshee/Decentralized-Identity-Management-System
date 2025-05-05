@@ -1,167 +1,172 @@
-DIMS: Decentralized Identity Management System
-DIMS is a full-stack decentralized application (dApp) that empowers users to create, manage, and verify digital identities on the Ethereum blockchain. By leveraging smart contracts, NFTs, and decentralized storage (IPFS), DIMS offers a transparent, secure, and user-controlled identity solution for Web3 applications.
+# 🌐 DIMS: Decentralized Identity Management System
 
-🚀 Features
-Self-Sovereign Identity Registration:
-Users can register their identity by providing their name, email, and uploading a proof document (image or PDF). The proof is stored on IPFS, ensuring privacy and decentralization.
+DIMS is a full-stack **decentralized application (dApp)** that empowers users to create, manage, and verify digital identities on the **Ethereum blockchain**. By leveraging **smart contracts**, **NFTs**, and **IPFS** for storage, DIMS offers a **transparent**, **secure**, and **user-controlled** identity solution tailored for Web3.
 
-On-Chain Identity Management:
-All identities are managed by a smart contract (DIMS.sol), which securely stores user details and the IPFS hash of their identity proof.
+---
 
-NFT-Based Identity Badges:
-Upon successful verification, users receive a unique NFT badge (IdentityNFT.sol) as proof of their verified identity.
+## 🚀 Features
 
-Admin Dashboard:
-Admins can view all verified users, upload updated proofs, and revoke identities as needed.
+- **🆔 Self-Sovereign Identity Registration**  
+  Users can register by providing their name, email, and uploading a proof document (image or PDF). Documents are securely stored on **IPFS**, ensuring privacy and decentralization.
 
-MetaMask Integration:
-Seamless wallet connection for registration, verification, and all blockchain interactions.
+- **🔗 On-Chain Identity Management**  
+  The `DIMS.sol` smart contract manages all identity data, storing key details and the corresponding IPFS hash.
 
-Decentralized Storage with IPFS:
-All identity proofs are uploaded to IPFS via Pinata, ensuring documents are tamper-proof and censorship-resistant.
+- **🏅 NFT-Based Identity Badges**  
+  Upon verification, users receive a unique **ERC-721 NFT** from `IdentityNFT.sol`, representing their verified identity.
 
-🏗️ Project Structure
-text
+- **🛠️ Admin Dashboard**  
+  Admins can verify users, update identity proofs, and revoke identities when needed.
+
+- **🦊 MetaMask Integration**  
+  Seamless MetaMask connectivity for registration, transactions, and interactions.
+
+- **📦 Decentralized Storage with IPFS**  
+  Documents are uploaded via **Pinata**, ensuring they are **tamper-proof** and **censorship-resistant**.
+
+---
+
+## 🏗️ Project Structure
 dims/
 ├── contracts/
-│   ├── DIMS.sol              # Main identity management smart contract
-│   ├── IdentityNFT.sol       # NFT contract for identity badges
-│   ├── scripts/
-│   │   ├── deploy.ts         # Deployment script for contracts
-│   │   └── testFlow.js       # Test script for contract flows
-│   └── test/
-│       └── Lock.test         # Example contract test
+│ ├──contracts/
+│   ├── DIMS.sol # Smart contract for identity management
+│   └── IdentityNFT.sol # NFT badge smart contract
+│ ├── scripts/
+│   ├── deploy.ts # Smart contract deployment script
+│   └── testFlow.js # Identity flow test script
+│ └── test/
+│   └── Lock.test # Example unit test
 ├── public/
-│   └── abi.json              # ABI for frontend contract interaction
+│ ├── abi.json # ABI for frontend integration
+│ └── nftabi.json # ABI for NFT
 ├── src/
-│   ├── app/
-│   │   ├── layout.tsx        # Global layout and styles
-│   │   ├── MetaMaskConnection.tsx
-│   │   ├── page.tsx          # Main UI page
-│   │   └── upload.tsx        # File upload page
-│   ├── components/
-│   │   └── adminPage.tsx     # Admin dashboard component
-│   └── lib/
-│       ├── ipfs.ts           # IPFS upload utilities
-│       └── web3.ts           # Blockchain interaction logic
-⚙️ How It Works
-1. Identity Registration
-Users connect their MetaMask wallet.
+│ ├── app/
+│   ├── admin/
+│     └── page.tsx
+│   ├── layout.tsx
+│   ├── MetaMaskConnection.tsx
+│   ├── page.tsx
+│   └── upload.tsx
+│ ├── components/
+│   └── button.tsx
+│ └── lib/
+│   ├── ipfs.ts
+│   └── web3.ts
 
-Fill in name, email, and upload a proof document.
 
-Proof is uploaded to IPFS; the hash is stored on-chain.
 
-Registration is recorded by the DIMS smart contract.
+---
 
-2. Verification and NFT Minting
-Admin reviews and verifies the identity.
+## ⚙️ How It Works
 
-On verification, an NFT badge is minted to the user as proof.
+### 1. Identity Registration
+- Connect wallet using MetaMask.
+- Enter name and email, then upload your proof document.
+- Document is uploaded to IPFS; hash is stored on-chain.
+- Identity details are recorded via the `DIMS.sol` smart contract.
 
-3. Identity Management
-Users and admins can:
+### 2. Verification & NFT Minting
+- Admin reviews submitted identity.
+- Upon approval, an NFT badge is minted and issued to the user's wallet.
 
-Fetch identity details by address.
+### 3. Identity Management
+- **Users/Admins** can:
+  - View identity details by address.
+  - Update proof documents.
+  - Revoke or verify identities (admin only).
+  - Browse all verified identities.
 
-Update identity proof (uploads new document to IPFS).
+---
 
-Revoke identity (admin only).
+## 🖥️ Getting Started
 
-View all verified users.
+### ✅ Prerequisites
 
-🖥️ Getting Started
-Prerequisites
-Node.js
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) or npm
+- [MetaMask](https://metamask.io/)
+- [Pinata](https://www.pinata.cloud/) account
+- [Hardhat](https://hardhat.org/) for contract deployment
 
-Yarn or npm
+---
 
-MetaMask
+### 📦 Setup
 
-Pinata account for IPFS uploads
-
-Hardhat for smart contract deployment
-
-Setup
-Clone the repository
-
-bash
-git clone https://github.com/yourusername/dims.git
+```bash
+git clone https://github.com/PSatakshee/dims.git
 cd dims
-Install dependencies
 
-bash
+- Install dependencies:
 yarn install
 # or
 npm install
-Configure Environment Variables
 
+---
+
+**### 🔐 Configure Environment**
 Copy .env.example to .env.local and fill in:
 
-NEXTPUBLICPINATAAPIKEY
+ALCHEMY_API_URL=
+PRIVATE_KEY=
+NEXT_PUBLIC_CONTRACT_ADDRESS=
+NEXT_PUBLIC_NFT_ADDRESS=
+NEXT_PUBLIC_WALLET_ADDRESS=
+NEXT_PUBLIC_PINATA_API_KEY=
+NEXT_PUBLIC_PINATA_SECRET_API_KEY=
+NEXT_PUBLIC_PINATA_JWT=
 
-NEXTPUBLICPINATASECRETAPIKEY
+---
 
-NEXTPUBLICPINATAJWT
+**###📤 Deploy Smart Contracts**
+Update hardhat.config.ts with your network and private key.
 
-NEXTPUBLICCONTRACTADDRESS
+Deploy: npx hardhat run scripts/deploy.ts --network sepolia
 
-NEXTPUBLICALCHEMYAPIURL
+- Copy deployed contract addresses to .env.local
 
-NEXTPUBLICWALLETADDRESS (admin wallet)
+---
 
-Deploy Smart Contracts
-
-Update hardhat.config.ts with your network and keys.
-
-Run:
-
-bash
-npx hardhat run scripts/deploy.ts --network sepolia
-Copy deployed contract addresses to your .env.local.
-
-Run the Frontend
-
-bash
+**### 🚀 Run the Frontend**
 yarn dev
 # or
 npm run dev
-Open http://localhost:3000 in your browser.
 
-🧩 Main Smart Contracts
-Contract	Purpose
-DIMS.sol	Manages identity registration, verification, and revocation. Stores identity metadata and IPFS hash.
-IdentityNFT.sol	Mints ERC-721 NFTs as identity badges for verified users. Only callable by DIMS contract.
-🛡️ Security & Privacy
-All sensitive documents are stored off-chain on IPFS.
+- Then open http://localhost:3000 in your browser.
 
-Only the IPFS hash and minimal identity metadata are stored on-chain.
 
-Verification and revocation actions are restricted to the contract owner (admin).
+---
 
-👨‍💻 Usage
-Users: Register, view, and update their identities. Download/view their proof document from IPFS.
+**## 🧩 Smart Contracts Overview**
 
-Admins: Verify identities, mint NFT badges, update proofs, and revoke identities.
+| Contract          | Purpose                                                                |
+| ----------------- | ---------------------------------------------------------------------- |
+| `DIMS.sol`        | Handles identity registration, updates, verifications, and revocations |
+| `IdentityNFT.sol` | Mints ERC-721 identity badge NFTs for verified users                   |
 
-Anyone: Lookup verified users and fetch identity details by address.
 
-🌐 Live Demo
-(Add link here if deployed on Vercel, Netlify, or another platform)
+---
 
-🤝 Contributing
-Contributions are welcome! Please open issues and pull requests for improvements or bug fixes.
+**### 🛡️ Security & Privacy**
 
-📄 License
-This project is licensed under the MIT License.
+Documents are stored off-chain on IPFS.
+Only the IPFS hash and essential metadata are stored on-chain.
+Only the admin wallet can verify or revoke identities.
 
-🙏 Acknowledgements
-OpenZeppelin for secure smart contract libraries
+---
 
-Pinata for IPFS integration
+**### 👨‍💻 Usage**
 
-Viem for blockchain interaction
+**Users:** Register, update identity, view/download proof document.
+**Admins:** Verify identities, mint NFTs, revoke users, manage identity lifecycle.
+**Public:** Search and view verified users by address.
 
-React Toastify for notifications
 
-DIMS: Take control of your digital identity in the decentralized world.
+
+
+
+
+
+
+
+
