@@ -106,8 +106,9 @@ npm install
 ```
 ---
 
-**### 🔐 Configure Environment**
-Copy .env.example to .env.local and fill in:
+### 🔐 Configure Environment
+
+- Copy .env.example to .env.local and fill in:
 
 ALCHEMY_API_URL=
 PRIVATE_KEY=
@@ -120,20 +121,25 @@ NEXT_PUBLIC_PINATA_JWT=
 
 ---
 
-**###📤 Deploy Smart Contracts**
-Update hardhat.config.ts with your network and private key.
+###📤 Deploy Smart Contracts
 
-Deploy: npx hardhat run scripts/deploy.ts --network sepolia
+- Update hardhat.config.ts with your network and private key.
+
+Deploy: 
+```bash
+npx hardhat run scripts/deploy.ts --network sepolia
+```
 
 - Copy deployed contract addresses to .env.local
 
 ---
 
-**### 🚀 Run the Frontend**
+### 🚀 Run the Frontend
+```bash
 yarn dev
 # or
 npm run dev
-
+```
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
