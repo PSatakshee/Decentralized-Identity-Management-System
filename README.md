@@ -97,12 +97,13 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ```bash
 git clone https://github.com/PSatakshee/dims.git
 cd dims
-
+```
 - Install dependencies:
+```bash
 yarn install
 # or
 npm install
-
+```
 ---
 
 **### 🔐 Configure Environment**
