@@ -1,36 +1,185 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 DIMS: Decentralized Identity Management System
 
-## Getting Started
+DIMS is a full-stack **decentralized application (dApp)** that empowers users to create, manage, and verify digital identities on the **Ethereum blockchain**. By leveraging **smart contracts**, **NFTs**, and **IPFS** for storage, DIMS offers a **transparent**, **secure**, and **user-controlled** identity solution tailored for Web3.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **🆔 Self-Sovereign Identity Registration**  
+  Users can register by providing their name, email, and uploading a proof document (image or PDF). Documents are securely stored on **IPFS**, ensuring privacy and decentralization.
+
+- **🔗 On-Chain Identity Management**  
+  The `DIMS.sol` smart contract manages all identity data, storing key details and the corresponding IPFS hash.
+
+- **🏅 NFT-Based Identity Badges**  
+  Upon verification, users receive a unique **ERC-721 NFT** from `IdentityNFT.sol`, representing their verified identity.
+
+- **🛠️ Admin Dashboard**  
+  Admins can verify users, update identity proofs, and revoke identities when needed.
+
+- **🦊 MetaMask Integration**  
+  Seamless MetaMask connectivity for registration, transactions, and interactions.
+
+- **📦 Decentralized Storage with IPFS**  
+  Documents are uploaded via **Pinata**, ensuring they are **tamper-proof** and **censorship-resistant**.
+
+
+---
+
+## 🏗️ Project Structure
+<details>
+<summary>Click to expand</summary>
+  dims/<br>
+  ├── contracts/<br>
+  │ ├──contracts/<br>
+  │ │  ├── DIMS.sol # Smart contract for identity management<br>
+  │ │  └── IdentityNFT.sol # NFT badge smart contract<br>
+  │ ├── scripts/<br>
+  │ │  ├── deploy.ts # Smart contract deployment script<br>
+  │ │  └── testFlow.js # Identity flow test script<br>
+  │ └── test/<br>
+  │ │  └── Lock.test # Example unit test<br>
+  ├── public/<br>
+  │ ├── abi.json # ABI for frontend integration<br>
+  │ └── nftabi.json # ABI for NFT<br>
+  ├── src/<br>
+  │ ├── app/<br>
+  │ │  ├── admin/<br>
+  │ │    └── page.tsx<br>
+  │ │  ├── layout.tsx<br>
+  │ │  ├── MetaMaskConnection.tsx<br>
+  │ │  ├── page.tsx<br>
+  │ │  └── upload.tsx<br>
+  │ ├── components/<br>
+  │ │  └── button.tsx<br>
+  │ └── lib/<br>
+  │ │  ├── ipfs.ts<br>
+  │ │  └── web3.ts<br>
+</details>
+
+---
+
+
+## ⚙️ How It Works
+
+### 1. Identity Registration
+- Connect wallet using MetaMask.
+- Enter name and email, then upload your proof document.
+- Document is uploaded to IPFS; hash is stored on-chain.
+- Identity details are recorded via the `DIMS.sol` smart contract.
+
+### 2. Verification & NFT Minting
+- Admin reviews submitted identity.
+- Upon approval, an NFT badge is minted and issued to the user's wallet.
+
+### 3. Identity Management
+- **Users/Admins** can:
+  - View identity details by address.
+  - Update proof documents.
+  - Revoke or verify identities (admin only).
+  - Browse all verified identities.
+
+
+---
+
+## 🖥️ Getting Started
+
+### ✅ Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) or npm
+- [MetaMask](https://metamask.io/)
+- [Pinata](https://www.pinata.cloud/) account
+- [Hardhat](https://hardhat.org/) for contract deployment
+
+  
+---
+
+### 📦 Setup
 
 ```bash
-npm run dev
+git clone https://github.com/PSatakshee/Decentralized-Identity-Management-System.git
+cd Decentralized-Identity-Management-System
+```
+- Install dependencies:
+```bash
+yarn install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+```
+- Create a **MetaMask** account
+
+---
+
+### 🔐 Configure Environment
+
+Copy this to .env.local and fill in:
+```
+ALCHEMY_API_URL=
+PRIVATE_KEY=
+NEXT_PUBLIC_CONTRACT_ADDRESS=
+NEXT_PUBLIC_NFT_ADDRESS=
+NEXT_PUBLIC_WALLET_ADDRESS=
+NEXT_PUBLIC_PINATA_API_KEY=
+NEXT_PUBLIC_PINATA_SECRET_API_KEY=
+NEXT_PUBLIC_PINATA_JWT=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📤 Deploy Smart Contracts
 
-## Learn More
+Update hardhat.config.ts with your network and private key.
 
-To learn more about Next.js, take a look at the following resources:
+**Deploy:**
+```bash
+npx hardhat run scripts/deploy.ts --network sepolia
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy deployed contract addresses to .env.local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  
+---
 
-## Deploy on Vercel
+### 🚀 Run the Frontend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+yarn dev
+# or
+npm run dev
+```
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  
+---
+
+## 🧩 Smart Contracts Overview
+
+| Contract          | Purpose                                                                |
+| ----------------- | ---------------------------------------------------------------------- |
+| `DIMS.sol`        | Handles identity registration, updates, verifications, and revocations |
+| `IdentityNFT.sol` | Mints ERC-721 identity badge NFTs for verified users                   |
+
+---
+
+## 🛡️ Security & Privacy
+
+- Documents are stored off-chain on IPFS.
+- Only the IPFS hash and essential metadata are stored on-chain.
+- Only the admin wallet can verify or revoke identities.
+
+---
+
+## 👨‍💻 Usage
+
+- **Users:** Register, update identity, view/download proof document.
+- **Admins:** Verify identities, mint NFTs, revoke users, manage identity lifecycle.
+- **Public:** Search and view verified users by address.
+
+---
+
+> Take control of your digital identity in the decentralized world with **DIMS**.
+
+
