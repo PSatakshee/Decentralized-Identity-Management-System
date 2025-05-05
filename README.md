@@ -30,8 +30,8 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 <details>
 <summary>Click to expand</summary>
   dims/
-  ├── contracts/
-  │ ├──contracts/
+ -├── contracts/
+ - │ ├──contracts/
   │   ├── DIMS.sol # Smart contract for identity management
   │   └── IdentityNFT.sol # NFT badge smart contract
   │ ├── scripts/
@@ -111,12 +111,19 @@ npm install
 - Copy .env.example to .env.local and fill in:
 
 ALCHEMY_API_URL=
+
 PRIVATE_KEY=
+
 NEXT_PUBLIC_CONTRACT_ADDRESS=
+
 NEXT_PUBLIC_NFT_ADDRESS=
+
 NEXT_PUBLIC_WALLET_ADDRESS=
+
 NEXT_PUBLIC_PINATA_API_KEY=
+
 NEXT_PUBLIC_PINATA_SECRET_API_KEY=
+
 NEXT_PUBLIC_PINATA_JWT=
 
 ---
