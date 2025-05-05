@@ -103,6 +103,7 @@ yarn install
 npm install
 
 ---
+## ⚙️ How It Works
 
 **### 🔐 Configure Environment**
 Copy .env.example to .env.local and fill in:
