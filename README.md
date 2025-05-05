@@ -29,35 +29,34 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ## 🏗️ Project Structure
 <details>
 <summary>Click to expand</summary>
-dims/
-├── contracts/
-│ ├──contracts/
-│   ├── DIMS.sol # Smart contract for identity management
-│   └── IdentityNFT.sol # NFT badge smart contract
-│ ├── scripts/
-│   ├── deploy.ts # Smart contract deployment script
-│   └── testFlow.js # Identity flow test script
-│ └── test/
-│   └── Lock.test # Example unit test
-├── public/
-│ ├── abi.json # ABI for frontend integration
-│ └── nftabi.json # ABI for NFT
-├── src/
-│ ├── app/
-│   ├── admin/
-│     └── page.tsx
-│   ├── layout.tsx
-│   ├── MetaMaskConnection.tsx
-│   ├── page.tsx
-│   └── upload.tsx
-│ ├── components/
-│   └── button.tsx
-│ └── lib/
-│   ├── ipfs.ts
-│   └── web3.ts
+  dims/
+  ├── contracts/
+  │ ├──contracts/
+  │   ├── DIMS.sol # Smart contract for identity management
+  │   └── IdentityNFT.sol # NFT badge smart contract
+  │ ├── scripts/
+  │   ├── deploy.ts # Smart contract deployment script
+  │   └── testFlow.js # Identity flow test script
+  │ └── test/
+  │   └── Lock.test # Example unit test
+  ├── public/
+  │ ├── abi.json # ABI for frontend integration
+  │ └── nftabi.json # ABI for NFT
+  ├── src/
+  │ ├── app/
+  │   ├── admin/
+  │     └── page.tsx
+  │   ├── layout.tsx
+  │   ├── MetaMaskConnection.tsx
+  │   ├── page.tsx
+  │   └── upload.tsx
+  │ ├── components/
+  │   └── button.tsx
+  │ └── lib/
+  │   ├── ipfs.ts
+  │   └── web3.ts
 
-
-
+</details>
 ---
 
 ## ⚙️ How It Works
@@ -134,41 +133,35 @@ yarn dev
 # or
 npm run dev
 
-- Then open http://localhost:3000 in your browser.
-
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-**## 🧩 Smart Contracts Overview**
+## 🧩 Smart Contracts Overview
 
 | Contract          | Purpose                                                                |
 | ----------------- | ---------------------------------------------------------------------- |
 | `DIMS.sol`        | Handles identity registration, updates, verifications, and revocations |
 | `IdentityNFT.sol` | Mints ERC-721 identity badge NFTs for verified users                   |
 
+---
+
+## 🛡️ Security & Privacy
+
+- Documents are stored off-chain on IPFS.
+- Only the IPFS hash and essential metadata are stored on-chain.
+- Only the admin wallet can verify or revoke identities.
 
 ---
 
-**### 🛡️ Security & Privacy**
+## 👨‍💻 Usage
 
-Documents are stored off-chain on IPFS.
-Only the IPFS hash and essential metadata are stored on-chain.
-Only the admin wallet can verify or revoke identities.
+- **Users:** Register, update identity, view/download proof document.
+- **Admins:** Verify identities, mint NFTs, revoke users, manage identity lifecycle.
+- **Public:** Search and view verified users by address.
 
 ---
 
-**### 👨‍💻 Usage**
-
-**Users:** Register, update identity, view/download proof document.
-**Admins:** Verify identities, mint NFTs, revoke users, manage identity lifecycle.
-**Public:** Search and view verified users by address.
-
-
-
-
-
-
-
-
+> Take control of your digital identity in the decentralized world with **DIMS**.
 
 
