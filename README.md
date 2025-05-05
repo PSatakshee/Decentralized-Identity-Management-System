@@ -115,25 +115,25 @@ npm install
 ### 🔐 Configure Environment
 
 Copy .env.example to .env.local and fill in:
-  
-    - ALCHEMY_API_URL=
-    - PRIVATE_KEY=
-    - NEXT_PUBLIC_CONTRACT_ADDRESS=
-    - NEXT_PUBLIC_NFT_ADDRESS=
-    - NEXT_PUBLIC_WALLET_ADDRESS=
-    - NEXT_PUBLIC_PINATA_API_KEY=
-    - NEXT_PUBLIC_PINATA_SECRET_API_KEY=
-    - NEXT_PUBLIC_PINATA_JWT=
-
+```
+ALCHEMY_API_URL=
+PRIVATE_KEY=
+NEXT_PUBLIC_CONTRACT_ADDRESS=
+NEXT_PUBLIC_NFT_ADDRESS=
+NEXT_PUBLIC_WALLET_ADDRESS=
+NEXT_PUBLIC_PINATA_API_KEY=
+NEXT_PUBLIC_PINATA_SECRET_API_KEY=
+NEXT_PUBLIC_PINATA_JWT=
+```
 
 ---
 
 
-###📤 Deploy Smart Contracts
+### 📤 Deploy Smart Contracts
 
 Update hardhat.config.ts with your network and private key.
 
-**Deploy: **
+**Deploy:**
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia
 ```
