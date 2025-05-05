@@ -108,13 +108,13 @@ yarn install
 # or
 npm install
 ```
-
+- Create a **MetaMask** account
 
 ---
 
 ### 🔐 Configure Environment
 
-Copy .env.example to .env.local and fill in:
+Copy this to .env.local and fill in:
 ```
 ALCHEMY_API_URL=
 PRIVATE_KEY=
