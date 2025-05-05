@@ -5,7 +5,7 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ---
 
 ## 🚀 Features
-
+<details>
 - **🆔 Self-Sovereign Identity Registration**  
   Users can register by providing their name, email, and uploading a proof document (image or PDF). Documents are securely stored on **IPFS**, ensuring privacy and decentralization.
 
@@ -23,6 +23,7 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 
 - **📦 Decentralized Storage with IPFS**  
   Documents are uploaded via **Pinata**, ensuring they are **tamper-proof** and **censorship-resistant**.
+</details>
 
 ---
 
@@ -55,7 +56,6 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
   │ └── lib/<br>
   │ │  ├── ipfs.ts<br>
   │ │  └── web3.ts<br>
-
 </details>
 
 
@@ -63,7 +63,7 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 
 
 ## ⚙️ How It Works
-
+<details>
 ### 1. Identity Registration
 - Connect wallet using MetaMask.
 - Enter name and email, then upload your proof document.
@@ -80,23 +80,25 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
   - Update proof documents.
   - Revoke or verify identities (admin only).
   - Browse all verified identities.
+</details>
 
 ---
 
 ## 🖥️ Getting Started
 
 ### ✅ Prerequisites
-
+<details>
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/) or npm
 - [MetaMask](https://metamask.io/)
 - [Pinata](https://www.pinata.cloud/) account
 - [Hardhat](https://hardhat.org/) for contract deployment
-
+</details>
+  
 ---
 
 ### 📦 Setup
-
+<details>
 ```bash
 git clone https://github.com/PSatakshee/dims.git
 cd dims
@@ -107,10 +109,12 @@ yarn install
 # or
 npm install
 ```
+</details>
+
 ---
 
 ### 🔐 Configure Environment
-
+<details>
 - Copy .env.example to .env.local and fill in:
   
     - ALCHEMY_API_URL=
@@ -121,32 +125,35 @@ npm install
     - NEXT_PUBLIC_PINATA_API_KEY=
     - NEXT_PUBLIC_PINATA_SECRET_API_KEY=
     - NEXT_PUBLIC_PINATA_JWT=
-
+</details>
 
 ---
 
 
 ###📤 Deploy Smart Contracts
-
+<details>
 - Update hardhat.config.ts with your network and private key.
 
-Deploy: 
+**Deploy: **
 ```bash
 npx hardhat run scripts/deploy.ts --network sepolia
 ```
 
 - Copy deployed contract addresses to .env.local
-
+</details>
+  
 ---
 
 ### 🚀 Run the Frontend
+<details>
 ```bash
 yarn dev
 # or
 npm run dev
 ```
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
-
+</details>details>
+  
 ---
 
 ## 🧩 Smart Contracts Overview
