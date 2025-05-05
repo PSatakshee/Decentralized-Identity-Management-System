@@ -4,8 +4,8 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 
 ---
 
-## 🚀 Features
-<details>
+<details>## 🚀 Features
+
 - **🆔 Self-Sovereign Identity Registration**  
   Users can register by providing their name, email, and uploading a proof document (image or PDF). Documents are securely stored on **IPFS**, ensuring privacy and decentralization.
 
