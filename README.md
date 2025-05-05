@@ -28,7 +28,7 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ---
 
 ## 🏗️ Project Structure
-
+<details>
 <summary>Click to expand</summary>
   dims/<br>
   ├── contracts/<br>
@@ -56,7 +56,7 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
   │ └── lib/<br>
   │ │  ├── ipfs.ts<br>
   │ │  └── web3.ts<br>
-
+</details>
 
 ---
 
