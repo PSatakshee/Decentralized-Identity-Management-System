@@ -2,7 +2,8 @@
 
 DIMS is a full-stack **decentralized application (dApp)** that empowers users to create, manage, and verify digital identities on the **Ethereum blockchain**. By leveraging **smart contracts**, **NFTs**, and **IPFS** for storage, DIMS offers a **transparent**, **secure**, and **user-controlled** identity solution tailored for Web3.
 
-==## **_Type `/admin` to go to Admin page._**
+## == **_Type `/admin` to go to Admin page._**
+
 ---
 
 ## 🚀 Features
