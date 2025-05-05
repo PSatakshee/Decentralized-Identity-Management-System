@@ -27,6 +27,8 @@ DIMS is a full-stack **decentralized application (dApp)** that empowers users to
 ---
 
 ## 🏗️ Project Structure
+<details>
+<summary>Click to expand</summary>
 dims/
 ├── contracts/
 │ ├──contracts/
@@ -103,7 +105,6 @@ yarn install
 npm install
 
 ---
-## ⚙️ How It Works
 
 **### 🔐 Configure Environment**
 Copy .env.example to .env.local and fill in:
